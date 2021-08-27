@@ -12,14 +12,20 @@ def is_valid_walk(walk):
     for step in walk:
         if step == 'n':
             x_axis += 1
+            print(f"x: {x_axis}, y: {y_axis}")
         elif step == 's':
             x_axis -= 1
+            print(f"x: {x_axis}, y: {y_axis}")
         elif step == 'w':
             y_axis -= 1
+            print(f"x: {x_axis}, y: {y_axis}")
         elif step == 'e':
             y_axis += 1
+            print(f"x: {x_axis}, y: {y_axis}")
 
     if len(walk) <= 10 and x_axis + y_axis == 0:
         return True
     else:
         return False
+
+is_valid_walk(['w', 's', 'e', 's', 'n', 'e', 'e', 's', 'n', 's'])
